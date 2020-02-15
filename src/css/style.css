@@ -321,6 +321,9 @@ html {
   @media only screen and (max-width: 30em) {
     html {
       font-size: 90%; } }
+  @media only screen and (min-width: 120em) {
+    html {
+      font-size: 125%; } }
 
 body {
   font-family: "Roboto Mono", monospace;
@@ -397,7 +400,7 @@ button {
 .header {
   background-color: #4c63b6;
   color: #fff;
-  height: 75vh;
+  height: 65vh;
   display: grid;
   align-content: center; }
   @media only screen and (max-width: 30em) {
@@ -528,7 +531,7 @@ button {
 .scroll-top {
   position: fixed;
   bottom: 1.5rem;
-  right: 0.5rem;
+  right: 0;
   z-index: 99;
   font-size: 2.5rem;
   display: none;
@@ -537,6 +540,9 @@ button {
   outline: none; }
   .scroll-top:hover {
     transform: translateY(-6px); }
+  @media only screen and (max-width: 30em) {
+    .scroll-top {
+      visibility: 0; } }
 
 input,
 textarea {
