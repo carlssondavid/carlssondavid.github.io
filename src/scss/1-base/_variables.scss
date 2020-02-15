@@ -1,0 +1,31 @@
+/* COLOR VARIABLES */
+
+/* Primary colors */
+$color-primary: #4c63b6;
+$color-primary--dark: #35469c;
+$color-primary--darker: #19216c;
+$color-primary--light: #98aeeb;
+
+/* Secondary colors */
+$color-secondary: #127fbf;
+$color-secondary--dark: #035388;
+$color-secondary--light: #2880ed;
+$color-secondary--lighter: #5ed0fa;
+
+/* Neutral colors */
+$color-neutral: #616e7c;
+$color-neutral--dark: #3e4c59;
+$color-neutral--darker: #1f2933;
+$color-neutral--light: #e4e7eb;
+$color-neutral--lighter: #f5f7fa;
+
+/* TYPOGRAPHY VARIABLES */
+$font-primary: "Roboto Mono", monospace;
+$font-display: "Source Sans Pro", sans-serif;
+
+/* BOX-SHADOWS */
+$shadow-primary: 0px 4px 24px rgba(0, 0, 0, 0.1);
+$shadow-primary--hover: 0px 4px 12px rgba(0, 0, 0, 0.1);
+
+/* SPACING */
+$section-spacing: 6rem;

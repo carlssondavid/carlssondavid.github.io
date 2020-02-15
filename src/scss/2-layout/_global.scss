@@ -1,0 +1,10 @@
+.container {
+  display: grid;
+  row-gap: $section-spacing;
+}
+
+.wrapper {
+  max-width: 90vw;
+  width: 1000px;
+  margin: 0 auto;
+}

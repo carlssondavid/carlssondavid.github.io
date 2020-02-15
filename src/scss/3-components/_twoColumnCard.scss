@@ -1,0 +1,7 @@
+.col-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
+  align-items: center;
+  column-gap: 3rem;
+  row-gap: 1rem;
+}
