@@ -2,27 +2,31 @@
   background-color: $color-primary;
   color: #fff;
   height: 70vh;
-
-  .btn {
-    margin-left: -10px;
-  }
+  display: grid;
+  align-content: center;
 
   .social {
-    margin: 1rem 2rem;
-
     display: grid;
-    grid-template-columns: repeat(3, min-content);
-    justify-content: end;
-    gap: 1.4rem;
-    margin-bottom: 3rem;
+    grid-template-columns: repeat(4, max-content);
+    gap: 2rem;
+    align-items: center;
+    margin-left: -10px;
+
+    @media only screen and (max-width: 25em) {
+      gap: 0.5rem;
+    }
 
     &__link {
-      color: #fff;
       font-size: 2rem;
+      color: #fff;
       transition: all 0.25s;
 
       &:hover {
         transform: translateY(-4px);
+      }
+
+      &:active {
+        transform: translateY(4px);
       }
     }
   }

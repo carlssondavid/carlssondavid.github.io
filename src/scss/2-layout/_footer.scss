@@ -5,3 +5,31 @@
   padding: 4rem 0;
   margin-top: 5rem;
 }
+.footer {
+  display: grid;
+  grid-template-rows: repeat(2, min-content);
+  gap: 1rem;
+  justify-content: center;
+  color: $color-neutral;
+
+  .social {
+    display: grid;
+    grid-template-columns: repeat(3, min-content);
+    gap: 3rem;
+    justify-content: center;
+
+    &__link {
+      font-size: 2rem;
+      color: $color-neutral;
+      transition: all 0.25s;
+
+      &:hover {
+        transform: translateY(-4px);
+      }
+
+      &:active {
+        transform: translateY(4px);
+      }
+    }
+  }
+}

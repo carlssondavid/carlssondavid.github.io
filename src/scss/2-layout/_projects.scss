@@ -32,4 +32,8 @@
 .row-spacing {
   display: grid;
   row-gap: $section-spacing;
+
+  @media only screen and (max-width: 50em) {
+    row-gap: $section-spacing--small;
+  }
 }

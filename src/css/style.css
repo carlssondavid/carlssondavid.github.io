@@ -315,8 +315,10 @@ template {
 /* Here I add the style of my typography */
 html {
   font-size: 112.5%; }
+  @media only screen and (max-width: 56.25em) {
+    html {
+      font-size: 100%; } }
 
-/*18px*/
 body {
   font-family: "Roboto Mono", monospace;
   font-weight: 400;
@@ -363,8 +365,7 @@ small,
 /* Will move to projects after */
 img {
   display: block;
-  width: 100%;
-  height: auto; }
+  width: 100%; }
 
 button {
   border-style: none;
@@ -375,32 +376,42 @@ button {
 /* LAYOUTS */
 .container {
   display: grid;
-  row-gap: 6rem; }
+  row-gap: 7rem; }
+  @media only screen and (max-width: 50em) {
+    .container {
+      row-gap: 4rem; } }
 
 .wrapper {
   max-width: 90vw;
-  width: 1000px;
+  width: 55.55555rem;
   margin: 0 auto; }
+  @media only screen and (max-width: 30em) {
+    .wrapper {
+      max-width: 95vw; } }
 
 .header {
   background-color: #4c63b6;
   color: #fff;
-  height: 70vh; }
-  .header .btn {
-    margin-left: -10px; }
+  height: 70vh;
+  display: grid;
+  align-content: center; }
   .header .social {
-    margin: 1rem 2rem;
     display: grid;
-    grid-template-columns: repeat(3, min-content);
-    justify-content: end;
-    gap: 1.4rem;
-    margin-bottom: 3rem; }
+    grid-template-columns: repeat(4, max-content);
+    gap: 2rem;
+    align-items: center;
+    margin-left: -10px; }
+    @media only screen and (max-width: 25em) {
+      .header .social {
+        gap: 0.5rem; } }
     .header .social__link {
-      color: #fff;
       font-size: 2rem;
+      color: #fff;
       transition: all 0.25s; }
       .header .social__link:hover {
         transform: translateY(-4px); }
+      .header .social__link:active {
+        transform: translateY(4px); }
 
 .projects__heading {
   margin-bottom: 1rem; }
@@ -424,7 +435,10 @@ button {
 
 .row-spacing {
   display: grid;
-  row-gap: 6rem; }
+  row-gap: 7rem; }
+  @media only screen and (max-width: 50em) {
+    .row-spacing {
+      row-gap: 4rem; } }
 
 .form {
   display: grid;
@@ -437,6 +451,26 @@ button {
   padding: 4rem 0;
   margin-top: 5rem; }
 
+.footer {
+  display: grid;
+  grid-template-rows: repeat(2, min-content);
+  gap: 1rem;
+  justify-content: center;
+  color: #616e7c; }
+  .footer .social {
+    display: grid;
+    grid-template-columns: repeat(3, min-content);
+    gap: 3rem;
+    justify-content: center; }
+    .footer .social__link {
+      font-size: 2rem;
+      color: #616e7c;
+      transition: all 0.25s; }
+      .footer .social__link:hover {
+        transform: translateY(-4px); }
+      .footer .social__link:active {
+        transform: translateY(4px); }
+
 /* COMPONENTS */
 .btn {
   /* Base styling */
@@ -444,7 +478,7 @@ button {
   background-color: #35469c;
   text-decoration: none;
   text-transform: uppercase;
-  padding: 0.75rem 1.5rem;
+  padding: 0.75rem 1.6rem;
   border-radius: 50rem;
   box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.1);
   transition: all 0.25s;
@@ -457,6 +491,8 @@ button {
     background-color: #19216c;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
     transform: translateY(-2px); }
+  .btn:active {
+    transform: translateY(4px); }
   .btn--hollow {
     border: 1px solid #35469c;
     background-color: transparent;
@@ -467,6 +503,8 @@ button {
       background-color: #19216c;
       color: #fff;
       transform: translateY(-2px); }
+    .btn--hollow:active {
+      transform: translateY(4px); }
   .btn--square {
     border-radius: 8px; }
 
@@ -480,7 +518,7 @@ textarea {
 
 .col-2 {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(21rem, 1fr));
   align-items: center;
   column-gap: 3rem;
-  row-gap: 1rem; }
+  row-gap: 1.5rem; }
