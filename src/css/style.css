@@ -320,7 +320,7 @@ html {
       font-size: 100%; } }
   @media only screen and (max-width: 30em) {
     html {
-      font-size: 87.5%; } }
+      font-size: 90%; } }
 
 body {
   font-family: "Roboto Mono", monospace;
@@ -365,7 +365,9 @@ small,
   font-weight: 700;
   color: #127fbf; }
 
-/* Will move to projects after */
+html {
+  scroll-behavior: smooth; }
+
 img {
   display: block;
   width: 100%; }
@@ -409,8 +411,7 @@ button {
     margin-left: -10px; }
     @media only screen and (max-width: 30em) {
       .header .social {
-        justify-content: center;
-        gap: 1rem; } }
+        margin-left: -5px; } }
     .header .social__link {
       font-size: 2rem;
       color: #fff;
@@ -441,15 +442,12 @@ button {
   display: grid;
   grid-template-columns: repeat(2, max-content);
   justify-content: start; }
-  @media only screen and (max-width: 30em) {
-    .projects .project__links {
-      justify-content: center; } }
 
 .projects .project button:nth-child(1) {
   margin-left: -10px; }
   @media only screen and (max-width: 30em) {
     .projects .project button:nth-child(1) {
-      margin-left: 0px; } }
+      margin-left: -5px; } }
 
 .row-spacing {
   display: grid;
@@ -492,6 +490,7 @@ button {
 /* COMPONENTS */
 .btn {
   /* Base styling */
+  outline: none;
   display: inline-block;
   background-color: #35469c;
   text-decoration: none;
@@ -525,6 +524,19 @@ button {
       transform: translateY(4px); }
   .btn--square {
     border-radius: 8px; }
+
+.scroll-top {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 0.5rem;
+  z-index: 99;
+  font-size: 2.5rem;
+  display: none;
+  cursor: pointer;
+  transition: all 0.25s;
+  outline: none; }
+  .scroll-top:hover {
+    transform: translateY(-6px); }
 
 input,
 textarea {

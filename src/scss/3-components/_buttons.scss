@@ -1,5 +1,6 @@
 .btn {
   /* Base styling */
+  outline: none;
   display: inline-block;
   background-color: $color-primary--dark;
   text-decoration: none;
@@ -45,5 +46,21 @@
 
   &--square {
     border-radius: 8px;
+  }
+}
+
+.scroll-top {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 0.5rem;
+  z-index: 99;
+  font-size: 2.5rem;
+  display: none;
+  cursor: pointer;
+  transition: all 0.25s;
+  outline: none;
+
+  &:hover {
+    transform: translateY(-6px);
   }
 }
