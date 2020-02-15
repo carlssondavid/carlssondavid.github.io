@@ -384,7 +384,23 @@ button {
 
 .header {
   background-color: #4c63b6;
-  color: #fff; }
+  color: #fff;
+  height: 70vh; }
+  .header .btn {
+    margin-left: -10px; }
+  .header .social {
+    margin: 1rem 2rem;
+    display: grid;
+    grid-template-columns: repeat(3, min-content);
+    justify-content: end;
+    gap: 1.4rem;
+    margin-bottom: 3rem; }
+    .header .social__link {
+      color: #fff;
+      font-size: 2rem;
+      transition: all 0.25s; }
+      .header .social__link:hover {
+        transform: translateY(-4px); }
 
 .projects__heading {
   margin-bottom: 1rem; }
