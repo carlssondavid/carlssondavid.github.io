@@ -318,6 +318,9 @@ html {
   @media only screen and (max-width: 56.25em) {
     html {
       font-size: 100%; } }
+  @media only screen and (max-width: 30em) {
+    html {
+      font-size: 87.5%; } }
 
 body {
   font-family: "Roboto Mono", monospace;
@@ -392,18 +395,22 @@ button {
 .header {
   background-color: #4c63b6;
   color: #fff;
-  height: 70vh;
+  height: 75vh;
   display: grid;
   align-content: center; }
+  @media only screen and (max-width: 30em) {
+    .header {
+      height: 100vh; } }
   .header .social {
     display: grid;
     grid-template-columns: repeat(4, max-content);
-    gap: 2rem;
+    gap: 1.5rem;
     align-items: center;
     margin-left: -10px; }
-    @media only screen and (max-width: 25em) {
+    @media only screen and (max-width: 30em) {
       .header .social {
-        gap: 0.5rem; } }
+        justify-content: center;
+        gap: 1rem; } }
     .header .social__link {
       font-size: 2rem;
       color: #fff;
@@ -430,8 +437,19 @@ button {
   .projects .project__techlist li {
     margin-right: 1.5rem; }
 
+.projects .project__links {
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  justify-content: start; }
+  @media only screen and (max-width: 30em) {
+    .projects .project__links {
+      justify-content: center; } }
+
 .projects .project button:nth-child(1) {
   margin-left: -10px; }
+  @media only screen and (max-width: 30em) {
+    .projects .project button:nth-child(1) {
+      margin-left: 0px; } }
 
 .row-spacing {
   display: grid;

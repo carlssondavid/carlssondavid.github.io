@@ -1,19 +1,24 @@
 .header {
   background-color: $color-primary;
   color: #fff;
-  height: 70vh;
+  height: 75vh;
   display: grid;
   align-content: center;
+
+  @media only screen and (max-width: 30em) {
+    height: 100vh;
+  }
 
   .social {
     display: grid;
     grid-template-columns: repeat(4, max-content);
-    gap: 2rem;
+    gap: 1.5rem;
     align-items: center;
     margin-left: -10px;
 
-    @media only screen and (max-width: 25em) {
-      gap: 0.5rem;
+    @media only screen and (max-width: 30em) {
+      justify-content: center;
+      gap: 1rem;
     }
 
     &__link {
